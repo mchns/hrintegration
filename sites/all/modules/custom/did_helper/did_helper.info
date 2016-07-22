@@ -1,0 +1,5 @@
+name = DID Helper
+description = Default helper module
+package = DID
+core = 7.x
+

@@ -1,0 +1,8 @@
+<?php
+/**
+ * FIX: Notice: Undefined index: distribution_name in drupal_install_profile_distribution_name() (line 207 \includes\install.inc).
+ */
+function did_helper_update_7001() {
+  variable_set('install_profile', 'standard');
+}
+?>

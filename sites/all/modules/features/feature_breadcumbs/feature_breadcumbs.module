@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Feature Breadcumbs feature.
+ */
+
+include_once 'feature_breadcumbs.features.inc';

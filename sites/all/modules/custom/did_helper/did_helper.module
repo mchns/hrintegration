@@ -1,0 +1,39 @@
+<?php
+
+/*
+* Adds custom styles to the weirdo ckeditor object && array config thingy 
+*/
+function did_helper_wysiwyg_editor_settings_alter(&$settings, $context) {
+  if ($context['profile']->editor == 'ckeditor') {
+    $settings['justifyClasses'] = array(
+      'align-left',
+      'align-center',
+      'align-right',
+      'align-justify',
+    );
+  }
+}
+
+/**
+* Implements hook_entity_info_alter().
+*/
+function did_helper_entity_info_alter(&$entity_info) {
+  $entity_info['node']['view modes']['teaser_without_images'] = array(
+    'label' => t('Teaser without images'),
+    'custom settings' => TRUE,
+  );
+} 
+
+/**
+ * Implements hook_node_presave().
+ */
+function did_helper_node_presave($node) {
+  if(isset($node->body['und'])) {
+    $count_body = count($node->body['und']);
+    for ($i=0; $i < $count_body; $i++) { 
+      $node->body['und'][$i]['value'] = str_replace('<p>&nbsp;</p>', '', $node->body['und'][$i]['value']);
+    }
+  }
+}
+
+?>

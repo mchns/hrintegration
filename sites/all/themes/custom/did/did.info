@@ -1,0 +1,14 @@
+name = DiD (Design is Dead)
+description = Starter theme
+core = 7.x
+stylesheets[all][] = css/style.css
+scripts[] = "js/scripts.js"
+
+regions[header] = Header
+regions[highlighted] = Highlighted
+regions[help] = Help
+regions[content] = Content
+regions[after] = After Content
+regions[sidebar_first] = Left sidebar
+regions[sidebar_second] = Right sidebar
+regions[footer] = Footer

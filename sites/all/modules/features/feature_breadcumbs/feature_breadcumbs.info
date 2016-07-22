@@ -1,0 +1,11 @@
+name = Feature Breadcumbs
+core = 7.x
+package = Features
+php = 5.2.4
+dependencies[] = context
+features[context][] = breadcrumbs_events
+features[context][] = breadcrumbs_news
+features[context][] = breadcrumbs_publications
+features[context][] = breadcrumbs_reports
+features[ctools][] = context:context:3
+features[features_api][] = api:1
